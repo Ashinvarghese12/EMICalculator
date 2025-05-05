@@ -8,8 +8,6 @@ import {
   IconButton,
   Drawer,
   List,
-  ListItem,
-  ListItemText,
   useTheme,
   useMediaQuery,
 } from '@mui/material';
@@ -28,9 +26,9 @@ function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const navItems = [
-    { label: 'Home', path: '/' },
-    { label: 'Exchange Rates (Live)', path: '/exchange' },
-    { label: 'About', path: '/about' },
+    { label: 'Home', path: 'EMICalculator/' },
+    { label: 'Exchange Rates (Live)', path: 'EMICalculator/exchange' },
+    { label: 'About', path: 'EMICalculator/about' },
     // { label: 'Error Page', path: '/error' },
   ];
 
@@ -79,6 +77,7 @@ function App() {
                       <NavLink 
                         to={path} 
                         key={label}
+                        end={label === 'Home'}
                         style={({ isActive }) => ({
                           ...drawerNavStyle,
                           ...(isActive ? activeDrawerStyle : {}),
@@ -104,6 +103,7 @@ function App() {
                 <NavLink
                   key={label}
                   to={path}
+                  end={label === 'Home'}
                   style={({ isActive }) => ({
                     ...navLinkStyle,
                     ...(isActive ? activeStyle : {}),
@@ -121,9 +121,9 @@ function App() {
 
       <Container>
         <Routes>
-          <Route path="/" element={<Calculator />} />
-          <Route path="/exchange" element={<ExchangeRatePage />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="EMICalculator/" element={<Calculator />} />
+          <Route path="EMICalculator/exchange" element={<ExchangeRatePage />} />
+          <Route path="EMICalculator/about" element={<AboutPage />} />
           {/* <Route path="/error" element={<ErrorPage />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
