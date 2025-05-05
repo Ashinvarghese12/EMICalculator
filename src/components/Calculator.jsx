@@ -110,7 +110,7 @@ const Calculator = () => {
             Monthly EMI: <strong>${emi}</strong>
           </Typography>
 
-          <Box mt={2} display="flex" alignItems="center" gap={2}>
+          <Box mt={2} display="flex" flexWrap="wrap" alignItems="center" gap={2}>
             <FormControl>
               <InputLabel>Currency</InputLabel>
               <Select
