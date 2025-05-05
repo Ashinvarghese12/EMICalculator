@@ -3,3 +3,7 @@
 This Loan Calculator App is a modern, single-page web application built using React JS and Material UI.
 It allows users to calculate loan EMIs (Equated Monthly Installments), view a detailed amortization schedule,
 and see real-time currency conversions of their EMI using live exchange rates.
+
+
+# The application is published on the below link.
+https://ashinvarghese12.github.io/EMICalculator/
