@@ -16,7 +16,7 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-do
 import Calculator from './components/Calculator';
 import ThemeToggle from './components/ThemeToggle';
 import NotFound from './pages/NotFound';
-import ErrorPage from './pages/ErrorPage';
+// import ErrorPage from './pages/ErrorPage';
 import ExchangeRatePage from './pages/ExchangeRate';
 import AboutPage from './pages/About';
 
@@ -124,7 +124,7 @@ function App() {
           <Route path="EMICalculator/" element={<Calculator />} />
           <Route path="EMICalculator/exchange" element={<ExchangeRatePage />} />
           <Route path="EMICalculator/about" element={<AboutPage />} />
-          <Route path="EMICalculator/error" element={<ErrorPage />} />
+          {/* <Route path="EMICalculator/error" element={<ErrorPage />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>
